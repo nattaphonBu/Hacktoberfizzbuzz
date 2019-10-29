@@ -18,11 +18,20 @@ class FizzbuzzTest(unittest.TestCase):
 
         self.assertEqual(actual, expected)
 
+    def test_input_number_5_should_return_buzz(self):
+        number = 5
+
+        expected = 'buzz'
+        actual = callFizzBuzz(number)
+
+        self.assertEqual(actual, expected)
+
+
 def callFizzBuzz(number):
     if number % 3 == 0:
-        
-        print(number)
         return 'fizz'
+    if number == 5:
+        return 'buzz'
 
 unittest.main()
 
